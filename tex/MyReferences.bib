@@ -1,3 +1,31 @@
+@misc{PeterTodd,
+	author = {Todd, Peter},
+	booktitle = {Github},
+	title = {petertodd/bloom-io-attack},
+	url = {https://github.com/petertodd/bloom-io-attack},
+	urldate = {2020-09-01}
+}
+
+
+
+@article{Swamidass2007,
+	abstract = {In many modern chemoinformatics systems, molecules are represented by long binary fingerprint vectors recording the presence or absence of particular features or substructures, such as labeled paths or trees, in the molecular graphs. These long fingerprints are often compressed to much shorter fingerprints using a simple modulo operation. As the length of the fingerprints decreases, their typical density and overlap tend to increase, and so does any similarity measure based on overlap, such as the widely used Tanimoto similarity. Here we show that this correlation between shorter fingerprints and higher similarity can be thought of as a systematic error introduced by the fingerprint folding algorithm and that this systematic error can be corrected mathematically. More precisely, given two molecules and their compressed fingerprints of a given length, we show how a better estimate of their uncompressed overlap, hence of their similarity, can be derived to correct for this bias. We show how the correction can be implemented not only for the Tanimoto measure but also for all other commonly used measures. Experiments on various data sets and fingerprint sizes demonstrate how, with a negligible computational overhead, the correction noticeably improves the sensitivity and specificity of chemical retrieval. {\textcopyright} 2007 American Chemical Society.},
+	author = {Swamidass, S. Joshua and Baldi, Pierre},
+	doi = {10.1021/ci600526a},
+	issn = {15499596},
+	journal = {Journal of Chemical Information and Modeling},
+	month = {may},
+	number = {3},
+	pages = {952--964},
+	pmid = {17444629},
+	publisher = {American Chemical Society},
+	title = {{Mathematical correction for fingerprint similarity measures to improve chemical retrieval}},
+	url = {https://pubs.acs.org/doi/abs/10.1021/ci600526a},
+	volume = {47},
+	year = {2007}
+}
+
+
 @article{Nick2015,
 	abstract = {We analyse the performance of several clustering algorithms in the digital peer- to-peer currency Bitcoin. Clustering in Bitcoin refers to the task of finding addresses that belongs to the same wallet as a given address. In order to assess the effectiveness of clustering strategies we exploit a vulner- ability in the implementation of Connection Bloom Filtering to capture ground truth data about 37,585 Bitcoin wallets and the addresses they own. In addition to well-known clustering techniques, we introduce two new strategies, apply them on addresses of the collected wallets and evaluate precision and recall using the ground truth. Due to the nature of the Connection Bloom Filtering vulnerability the data we collect is not without errors. We present a method to correct the performance metrics in the presence of such inaccuracies. Our results demonstrate that even modern wallet software can not protect its users properly. Even with the most basic clustering technique known as multi- input heuristic, an adversary can guess on average 68.59% addresses of a victim. We show that this metric can be further improved by combining several more sophisticated heuristics.},
 	author = {Nick, Jonas David},
