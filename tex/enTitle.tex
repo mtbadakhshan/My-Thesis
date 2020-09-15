@@ -16,7 +16,7 @@
 \latinname{Mohammadtaghi}
 \latinsurname{Badakhshan}
 \latinthesisdate{September 2020}
-\latinkeywords{Writing Thesis, Template, \LaTeX, \XePersian}
+\latinkeywords{Blockchain, Bitcoin, Privacy Provision, Lightweight Client, Simplified Payment Verification(SPV)}
 \en-abstract{
-This thesis studies on writing projects, theses and dissertations using tehran-thesis class. It ...
-}
+Lightweight users make up a significant portion of Bitcoin's peer-to-peer network. On the other hand, these users depend on the full node to receive their information, so a significant part of their information is revealed to the full nodes. Therefore, their privacy is very important. The use of the Bloom filter, which was proposed as the first way to protect the privacy of light users in the $37$th Bitcoin improvement Proposal (BIP) , has many major drawbacks. In this method, a series of cover addresses, as a result of Bloom filter's false positive error, is used to hide the SPV client's addresses. This thesis outlines the weaknesses of using the Bloom filter in the Bitcoin peer-to-peer network. It also reviews solutions that have been proposed to replace or improve the Bloom filter.\\
+In this Thesis, an attempt has been made to provide a solution that, unlike the Bloom filter, in which cover addresses were chosen randomly and blindly, these addresses were selected wisely.  The selected addresses are selected in such a way that the entropy of the set of requested addresses is maximized and the full node faces more ambiguous. This method also allows the SPV clients to adjust the bandwidth consumed per request.}
