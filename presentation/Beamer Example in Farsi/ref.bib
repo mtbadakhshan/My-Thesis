@@ -1,0 +1,122 @@
+@article{Gervais2014,
+author = {Gervais, Arthur and Capkun, Srdjan and Karame, Ghassan O. and Gruber, Damian},
+title = {{On the Privacy Provisions of Bloom Filters in Lightweight Bitcoin Clients}},
+year = {2014},
+isbn = {9781450330053},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+doi = {10.1145/2664243.2664267},
+abstract = {Lightweight Bitcoin clients are gaining increasing adoption among Bitcoin users, owing to their reduced resource and bandwidth consumption. These clients support a simplified payment verification (SPV) mode as they are only required to download and verify a part of the block chain---thus supporting the usage of Bitcoin on constrained devices, such as smartphones. SPV clients rely on Bloom filters to receive transactions that are relevant to their local wallet. These filters embed all the Bitcoin addresses used by the SPV clients, and are outsourced to more powerful Bitcoin nodes which then only forward to those clients transactions relevant to their outsourced Bloom filters.In this paper, we explore the privacy of existing SPV clients. We show analytically and empirically that the reliance on Bloom filters within existing SPV clients leaks considerable information about the addresses of Bitcoin users. Our results show that an SPV client who uses a modest number of Bitcoin addresses (e.g., < 20) risks revealing almost all of his addresses. We also show that this information leakage is further exacerbated when users restart their SPV clients and/or when the adversary has access to more than one Bloom filter pertaining to the same SPV client. Motivated by these findings, we propose an efficient countermeasure to enhance the privacy of users which rely on SPV clients; our proposal can be directly integrated within existing SPV client implementations.},
+journal = {Proceedings of the 30th Annual Computer Security Applications Conference},
+pages = {326–335},
+location = {New Orleans, Louisiana, USA},
+series = {ACSAC '14}
+}
+
+
+@article{Broder2004,
+	abstract = {A Bloom filter is a simple space-efficient randomized data structure for representing a set in order to support membership queries. Bloom filters allow false positives but the space savings often outweigh this drawback when the probability of an error is controlled. Bloom filters have been used in database applications since the 1970s, but only in recent years have they become popular in the networking literature. The aim of this paper is to survey the ways in which Bloom filters have been used and modified in a variety of network problems, with the aim of providing a unified mathematical and practical framework for understanding them and stimulating their use in future applications. {\textcopyright} A K Peters, Ltd.},
+	author = {Broder, Andrei and Mitzenmacher, Michael},
+	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/Bloom Filter/euclid.im.1109191032.pdf:pdf},
+	journal = {Internet Mathematics},
+	mendeley-groups = {Bloom Filter},
+	number = {4},
+	pages = {485--509},
+	title = {{Network applications of bloom filters: A survey}},
+	volume = {1},
+	year = {2004}
+}
+
+@article{Nick2015,
+	abstract = {We analyse the performance of several clustering algorithms in the digital peer- to-peer currency Bitcoin. Clustering in Bitcoin refers to the task of finding addresses that belongs to the same wallet as a given address. In order to assess the effectiveness of clustering strategies we exploit a vulner- ability in the implementation of Connection Bloom Filtering to capture ground truth data about 37,585 Bitcoin wallets and the addresses they own. In addition to well-known clustering techniques, we introduce two new strategies, apply them on addresses of the collected wallets and evaluate precision and recall using the ground truth. Due to the nature of the Connection Bloom Filtering vulnerability the data we collect is not without errors. We present a method to correct the performance metrics in the presence of such inaccuracies. Our results demonstrate that even modern wallet software can not protect its users properly. Even with the most basic clustering technique known as multi- input heuristic, an adversary can guess on average 68.59% addresses of a victim. We show that this metric can be further improved by combining several more sophisticated heuristics.},
+	author = {Nick, Jonas David},
+	doi = {10.3929/ethz-a-010541254},
+	file = {:home/taghi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Nick - 2015 - Data-Driven De-Anonymization in Bitcoin.pdf:pdf},
+	journal = {ETH Zurich},
+	keywords = {DATA SECURITY + DATA PROTECTION (OPERATING SYSTEMS,DATENSICHERHEIT + DATENSCHUTZ (BETRIEBSSYSTEME),ELECTRONIC MONEY,ELEKTRONISCHES GELD,PROGRAMME UND ALGORITHMEN ZUR L{\"{O}}SUNG SPEZIELLER PR,PROGRAMS AND ALGORITHMS FOR THE SOLUTION OF SPECIA,SPECIAL PROGRAMMING METHODS,SPEZIELLE PROGRAMMIERMETHODEN},
+	pages = {1--32},
+	publisher = {ETH-Z{\"{u}}rich},
+	title = {{Data-Driven De-Anonymization in Bitcoin}},
+	year = {2015}
+}
+
+
+@article{Bianchi2012,
+	abstract = {Bloom filters are probabilistic data structures which permit to conveniently represent set membership. Their performance/memory efficiency makes them appealing in a huge variety of scenarios. Their probabilistic operation, along with the implicit data representation, yields some ambiguity on the actual data stored, which, in scenarios where cryptographic protection is unviable or unpractical, may be somewhat considered as a better than nothing privacy asset. Oddly enough, even if frequently mentioned, to the best of our knowledge the (soft) privacy properties of Bloom filters have never been explicitly quantified. This work aims to fill this gap. Starting from the adaptation of probabilistic anonymity metrics to the Bloom filter setting, we derive exact and (tightly) approximate formulae which permit to readily relate privacy properties with filter (and universe set) parameters. Using such relations, we quantitatively investigate the emerging privacy/utility trade-offs. We finally preliminary assess the advantages that a tailored insertion of a few extra (covert) bits achieves over the commonly employed strategy of increasing ambiguity via addition of random bits. {\textcopyright} 2012 Springer-Verlag Berlin Heidelberg.},
+	author = {Bianchi, Giuseppe and Bracciale, Lorenzo and Loreti, Pierpaolo},
+	doi = {10.1007/978-3-642-33627-0-27},
+	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/Bloom Filter/bianchi2012.pdf:pdf},
+	isbn = {9783642336263},
+	issn = {03029743},
+	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+	mendeley-groups = {Bloom Filter},
+	pages = {348--363},
+	title = {{Better than nothing privacy with bloom filters: To what extent?}},
+	volume = {7556 LNCS},
+	year = {2012}
+}
+
+@article{Kanemura2017,
+	abstract = {Bitcoin is a decentralized currency system that does not need any central authorities. All transactions issued by users have been recorded in the common ledger, called blockchain, which is shared by all users. In Bitcoin, an SPV (Simplified Payment Verification) client, which is a lightweight client that does not possess the entire blockchain, are developed for storage constrained devices such as a mobile phone. For an SPV client to check if there are transactions related to it, a Bloom filter where their Bitcoin addresses are involved is sent to a full client that possesses the entire blockchain. The full client only transfers transactions of which Bitcoin addresses are positive on the received Bloom filter. However, it is necessary to preserve the privacy of SPV clients when designing a Bloom filter because SPV clients' Bitcoin addresses will be identified by a full client with high probability. In this paper, we propose a privacy-preserving Bloom filter design for SPV clients based on $\gamma$-Deniability. $\gamma$-Deniability is a privacy metric that shows how much true positive Bitcoin addresses are hidden by the false positives in a Bloom filter. Furthermore, in order to design a Bloom Filter that satisfies a certain $\gamma$-Deniability, it is necessary to know the number of unique Bitcoin addresses that appear for the first time since the queried time. Based on our manual inspection, we propose to estimate it based on the linear regression. We show that our scheme achieves good estimation accuracy and $\gamma$ through the simulation with a real Bitcoin blockchain.},
+	author = {Kanemura, Kota and Toyoda, Kentaroh and Ohtsuki, Tomoaki},
+	doi = {10.1109/PIMRC.2017.8292537},
+	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/kanemura2017.pdf:pdf},
+	isbn = {9781538635315},
+	journal = {2017 IEEE 28th Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC)},
+	mendeley-groups = {Bloom Filter},
+	pages = {1--6},
+	title = {{Design of privacy-preserving mobile bitcoin client based on $\gamma$-deniability enabled bloom filter}},
+	volume = {2017-October},
+	year = {2017}
+}
+
+@misc{Osuntokun2017,
+	author = {Osuntokun, Olaoluwa and Akselrod, Alex and Posen, Jim},
+	title = {{bips/bip-0157.mediawiki at master {\textperiodcentered} bitcoin/bips - Client Side Block Filtering}},
+	note = {\url{https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki}},
+	urldate = {2020-08-16},
+	year = {2017}
+}
+
+@inproceedings{Qin2019,
+	abstract = {Lightweight Bitcoin clients execute a Simple Payment Verification (SPV) protocol to verify the validity of transactions related to a particular user. Currently, lightweight clients use Bloom filters to significantly reduce the amount of bandwidth required to validate a particular transaction. This is despite the fact that research has shown that Bloom filters are insufficient at preserving the privacy of clients' queries. In this paper we describe our design of an SPV protocol that leverages Private Information Retrieval (PIR) to create fully private and performant queries. We show that our protocol has a low bandwidth and latency cost; properties that make our protocol a viable alternative for lightweight Bitcoin clients and other cryptocurrencies with a similar SPV model. In contract to Bloom filters, our PIR-based approach offers deterministic privacy to the user. Among our results, we show that in the worst case, clients who would like to verify 100 transactions occurring in the past week incurs a bandwidth cost of 33.54 MB with an associated latency of approximately 4.8 minutes, when using our protocol. The same query executed using the Bloom-filter-based SPV protocol incurs a bandwidth cost of 12.85 MB; this is a modest overhead considering the privacy guarantees it provides.},
+	author = {Qin, Kaihua and Hadass, Henryk and Gervais, Arthur and Reardon, Joel},
+	booktitle = {Proceedings - 2019 Crypto Valley Conference on Blockchain Technology, CVCBT 2019},
+	doi = {10.1109/CVCBT.2019.00012},
+	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/qin2019.pdf:pdf},
+	isbn = {9781728136691},
+	keywords = {Bitcoin,Private Information Retrieval,Simple Payment Verification},
+	mendeley-groups = {PIR},
+	month = {jun},
+	pages = {60--72},
+	publisher = {Institute of Electrical and Electronics Engineers Inc.},
+	title = {{Applying private information retrieval to lightweight bitcoin clients}},
+	year = {2019}
+}
+
+@article{Matetic2019,
+	abstract = {Blockchains offer attractive advantages over traditional payments such as the ability to operate without a trusted authority and increased user privacy. However, the verification of blockchain payments requires the user to download and process the entire chain which can be infeasible for resource-constrained devices like mobile phones. To address this problem, most major blockchain systems support so called lightweight clients that outsource most of the computational and storage burden to full blockchain nodes. However, such verification leaks critical information about clients' transactions, thus defeating user privacy that is often considered one of the main goals of decentralized cryptocurrencies. In this paper, we propose a new approach to protect the privacy of light clients in Bitcoin. Our main idea is to leverage the trusted execution capabilities of commonly available SGX enclaves. We design and implement a system called BITE where enclaves on full nodes serve privacy-preserving requests from light clients. However, as we will show, naive processing of client requests from within SGX enclaves still leaks client's addresses and transactions. BITE therefore integrates several private information retrieval and side-channel protection techniques at critical parts of the system. We show that BITE provides significantly improved privacy protection for light clients without compromising the performance of the assisting full nodes.},
+	author = {Matetic, Sinisa and Kostiainen, Kari and W{\"{u}}st, Karl and Karame, Ghassan and Schneider, Moritz and Capkun, Srdjan},
+	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/sec19-matetic.pdf:pdf},
+	isbn = {9781939133069},
+	journal = {Proceedings of the 28th USENIX Security Symposium},
+	pages = {783--800},
+	title = {{BITE: Bitcoin lightweight client privacy using trusted execution}},
+	year = {2019}
+}
+
+@article{Niu2015,
+	author = {Niu, Ben and Li, Qinghua and Zhu, Xiaoyan and Cao, Guohong and Li, Hui},
+	doi = {10.1109/INFOCOM.2015.7218474},
+	file = {:home/taghi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Niu et al. - 2015 - Enhancing privacy through caching in location-based services.pdf:pdf},
+	isbn = {9781479983810},
+	issn = {0743166X},
+	journal = {Proceedings - IEEE INFOCOM},
+	keywords = {K-anonymity,LBS,Privacy},
+	mendeley-groups = {K-anonymity},
+	mendeley-tags = {K-anonymity,LBS,Privacy},
+	pages = {1017--1025},
+	title = {{Enhancing privacy through caching in location-based services}},
+	volume = {26},
+	year = {2015}
+}

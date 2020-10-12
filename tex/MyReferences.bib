@@ -614,18 +614,19 @@
 }
 
 @article{Gervais2014,
-	abstract = {Lightweight Bitcoin clients are gaining increasing adoption among Bitcoin users, owing to their reduced resource and bandwidth consumption. These clients support a simplified payment verification (SPV) mode as they are only required to download and verify a part of the block chain-thus supporting the usage of Bitcoin on constrained devices, such as smartphones. SPV clients rely on Bloom filters to receive transactions that are relevant to their local wallet. These filters embed all the Bitcoin addresses used by the SPV clients, and are outsourced to more powerful Bitcoin nodes which then only forward to those clients transactions relevant to their outsourced Bloom filters. In this paper, we explore the privacy of existing SPV clients. We show analytically and empirically that the reliance on Bloom filters within existing SPV clients leaks considerable information about the addresses of Bitcoin users. Our results show that an SPV client who uses a modest number of Bitcoin addresses (e.g., < 20) risks revealing almost all of his addresses. We also show that this information leakage is further exacerbated when users restart their SPV clients and/or when the adversary has access to more than one Bloom filter pertaining to the same SPV client. Motivated by these findings, we propose an efficient countermeasure to enhance the privacy of users which rely on SPV clients; our proposal can be directly integrated within existing SPV client implementations.},
-	author = {Gervais, Arthur and Karame, Ghassan O. and Gruber, Damian and Capkun, Srdjan},
+	author = {Gervais, Arthur and Capkun, Srdjan and Karame, Ghassan O. and Gruber, Damian},
+	title = {{On the Privacy Provisions of Bloom Filters in Lightweight Bitcoin Clients}},
+	year = {2014},
+	isbn = {9781450330053},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
 	doi = {10.1145/2664243.2664267},
-	file = {:home/taghi/Dropbox/Academic/SecurityandPrivacy/Lightweight/Gervais2014.pdf:pdf},
-	journal = {ACM International Conference Proceeding Series},
-	number = {December},
-	pages = {326--335},
-	title = {{On the privacy provisions of bloom filters in lightweight bitcoin clients}},
-	volume = {2014-Decem},
-	year = {2014}
+	abstract = {Lightweight Bitcoin clients are gaining increasing adoption among Bitcoin users, owing to their reduced resource and bandwidth consumption. These clients support a simplified payment verification (SPV) mode as they are only required to download and verify a part of the block chain---thus supporting the usage of Bitcoin on constrained devices, such as smartphones. SPV clients rely on Bloom filters to receive transactions that are relevant to their local wallet. These filters embed all the Bitcoin addresses used by the SPV clients, and are outsourced to more powerful Bitcoin nodes which then only forward to those clients transactions relevant to their outsourced Bloom filters.In this paper, we explore the privacy of existing SPV clients. We show analytically and empirically that the reliance on Bloom filters within existing SPV clients leaks considerable information about the addresses of Bitcoin users. Our results show that an SPV client who uses a modest number of Bitcoin addresses (e.g., < 20) risks revealing almost all of his addresses. We also show that this information leakage is further exacerbated when users restart their SPV clients and/or when the adversary has access to more than one Bloom filter pertaining to the same SPV client. Motivated by these findings, we propose an efficient countermeasure to enhance the privacy of users which rely on SPV clients; our proposal can be directly integrated within existing SPV client implementations.},
+	journal = {Proceedings of the 30th Annual Computer Security Applications Conference},
+	pages = {326–335},
+	location = {New Orleans, Louisiana, USA},
+	series = {ACSAC '14}
 }
-
 @article{Matetic2019,
 	abstract = {Blockchains offer attractive advantages over traditional payments such as the ability to operate without a trusted authority and increased user privacy. However, the verification of blockchain payments requires the user to download and process the entire chain which can be infeasible for resource-constrained devices like mobile phones. To address this problem, most major blockchain systems support so called lightweight clients that outsource most of the computational and storage burden to full blockchain nodes. However, such verification leaks critical information about clients' transactions, thus defeating user privacy that is often considered one of the main goals of decentralized cryptocurrencies. In this paper, we propose a new approach to protect the privacy of light clients in Bitcoin. Our main idea is to leverage the trusted execution capabilities of commonly available SGX enclaves. We design and implement a system called BITE where enclaves on full nodes serve privacy-preserving requests from light clients. However, as we will show, naive processing of client requests from within SGX enclaves still leaks client's addresses and transactions. BITE therefore integrates several private information retrieval and side-channel protection techniques at critical parts of the system. We show that BITE provides significantly improved privacy protection for light clients without compromising the performance of the assisting full nodes.},
 	author = {Matetic, Sinisa and Kostiainen, Kari and W{\"{u}}st, Karl and Karame, Ghassan and Schneider, Moritz and Capkun, Srdjan},
